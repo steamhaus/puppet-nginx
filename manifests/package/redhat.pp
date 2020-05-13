@@ -72,13 +72,13 @@ class nginx::package::redhat {
       'passenger': {
         if ($facts['os']['name'] in ['RedHat', 'CentOS']) and ($facts['os']['release']['major'] in ['6', '7']) {
           yumrepo { 'passenger':
-            baseurl       => "https://oss-binaries.phusionpassenger.com/yum/passenger/el/${facts['os']['release']['major']}/\$basearch",
+            baseurl       => "https://oss-binaries.phusionpassenger.com/yum/passenger/el/7/x86_64/",
             descr         => 'passenger repo',
             enabled       => '1',
-            gpgcheck      => '0',
-            repo_gpgcheck => '1',
+            gpgcheck      => '1,
+            repo_gpgcheck => '0',
             priority      => '1',
-            gpgkey        => 'https://packagecloud.io/phusion/passenger/gpgkey',
+            gpgkey        => 'https://oss-binaries.phusionpassenger.com/auto-software-signing-gpg-key.txt',
             before        => Package['nginx'],
           }
 
