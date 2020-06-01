@@ -72,7 +72,7 @@ class nginx::package::redhat {
       'passenger': {
         if ($facts['os']['name'] in ['RedHat', 'CentOS']) and ($facts['os']['release']['major'] in ['6', '7']) {
           yumrepo { 'passenger':
-            baseurl       => "https://oss-binaries.phusionpassenger.com/yum/passenger/el/7/x86_64/",
+            baseurl       => "https://oss-binaries.phusionpassenger.com/yum/passenger/el/7/x86_64/mod_passenger-6.0.4-1.el7.x86_64.rpm",
             descr         => 'passenger repo',
             enabled       => '1',
             gpgcheck      => '0',
