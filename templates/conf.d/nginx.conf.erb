@@ -1,4 +1,5 @@
 # MANAGED BY PUPPET
+load_module /usr/lib64/nginx/modules/ngx_http_passenger_module.so;
 <% @dynamic_modules.each do |mod_item| -%>
   <%- if mod_item =~ /^\/.*/ -%>
 load_module "<%= mod_item -%>";
