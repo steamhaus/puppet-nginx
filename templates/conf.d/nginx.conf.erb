@@ -110,7 +110,8 @@ http {
   tcp_nopush on;
   <%- end -%>
 <% end -%>
-  server_tokens <%= @server_tokens %>;
+  server_tokens off;
+  remove_header X-Powered-By;
 
   types_hash_max_size <%= @types_hash_max_size %>;
   types_hash_bucket_size <%= @types_hash_bucket_size %>;
