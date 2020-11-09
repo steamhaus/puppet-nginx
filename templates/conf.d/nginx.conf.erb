@@ -111,7 +111,7 @@ http {
   <%- end -%>
 <% end -%>
   server_tokens off;
-  remove_header X-Powered-By;
+  proxy_hide_header X-Powered-By; 
 
   types_hash_max_size <%= @types_hash_max_size %>;
   types_hash_bucket_size <%= @types_hash_bucket_size %>;
