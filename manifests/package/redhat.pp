@@ -89,7 +89,7 @@ class nginx::package::redhat {
           }
 
           yumrepo { 'nginx-release':
-            ensure => '1.16.1',
+            ensure => absent,
             before => Package['nginx'],
           }
 
