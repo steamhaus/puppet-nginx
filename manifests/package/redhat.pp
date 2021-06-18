@@ -108,7 +108,7 @@ class nginx::package::redhat {
   }
 
   package { 'nginx':
-    ensure => '1.16.1',
+    ensure => $package_ensure,
     name   => $package_name,
   }
 }
